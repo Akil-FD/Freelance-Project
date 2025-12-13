@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  /* Use Playfair Display for headings */
+  --font-heading: "Playfair Display", serif;
+
+  /* Use Inter for body text */
+  --font-body: "Inter", sans-serif;
+}
+
+/* Your variables */
+:root {
+  --brand-color: #0070f3;
+  --text-color: #222;
+  --card-bg: #fff;
+  --radius: 12px;
+  --secondary-color: #ff4081;
+  /* --text-primary-color: #5e4d45; */
+  --text-primary-color: #2b1e16;
+  --text-secondary-color: #ffffff;
+  --bg-color: #efe8e2;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Global font style */
+body {
+  background: #f7f7f7;
+  line-height: 1.5;
+}
+
+/* Tailwind component classes */
+@layer components {
+  .heading {
+    @apply font-heading font-semibold tracking-wide;
+  }
+
+  .subheading {
+    @apply font-heading font-sans tracking-widest;
+  }
+
+  .body-text {
+    @apply font-body font-light;
+  }
+
+  .body-bold {
+    @apply font-body font-normal;
+  }
+
+}
+
+.text-primary {
+  color: var(--text-primary-color);
+}
+
+.text-secondary {
+  color: var(--text-secondary-color);
+}
+
+.bg-primary {
+  background-color: var(--text-primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--bg-color);
+}
+
+.hero-line {
+  @apply w-[100px] h-[2px] bg-gray-300;
+  margin: 0px auto !important;
+
+}
+
+.hero-establish-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.hero-established-text {
+  color: #ffffff;
+}
+
+.hero-arrow {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.personal-story-txt-sec-p {
+  padding: 30px 10px !important;
+}
+
+.custom-p-30 {
+  padding: 30px !important;
+}
+
+.custom-mx-30 {
+  margin-inline: 30px;
+}
+
+.custom-mx-50 {
+  margin-inline: 50px !important;
+}
+
+.project-slide-button-p{
+  padding: 3px 5px;
+}
