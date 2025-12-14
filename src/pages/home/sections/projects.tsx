@@ -1,33 +1,34 @@
-import Carousel from "@/src/components/image-caursol";
+
+import ResponsiveSlider from "@/src/components/responsive-slider";
 
 export default function Projects() {
     const slides = [
         {
-            image: "/images/project-1.jpg",
+            id: 1,
+            src: "/images/project-1.jpg",
             title: "Modern Interior",
+            alt: "Modern Interior",
             link: "#",
         },
         {
-            image: "/images/project-2.jpg",
+            id: 2,
+            src: "/images/project-2.jpg",
             title: "Elegant Style",
+            alt: "Elegant Style",
             link: "#",
         },
         {
-            image: "/images/project-3.jpg",
+            id: 3,
+            src: "/images/project-3.jpg",
             title: "Luxury Themes",
+            alt: "Luxury Themes",
             link: "#",
         },
     ];
-    
-    return (
-        <section className="w-full h-[80vh] md:h-[100vh] flex items-center justify-center bg-[#efe8e2]">
-            <Carousel
-                items={slides}
-                isFullScreen
-                titleClass="text-3xl md:text-3xl font-heading text-white uppercase"
-                descriptionClass="text-lg text-white/90"
-            />
 
+    return (
+        <section className="w-full h-[50vh] md:h-[100vh] flex items-center justify-center bg-[#efe8e2]">
+            <ResponsiveSlider slides={slides}/>
         </section>
     )
 }

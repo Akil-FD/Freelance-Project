@@ -24,14 +24,14 @@ export default function FeedbackSlider({
             (prev) => (prev - 1 + clientFeedBacks.length) % clientFeedBacks.length
         );
 
-    /* ✅ Measure AFTER layout */
+
     useLayoutEffect(() => {
         if (activeRef.current) {
             setHeight(activeRef.current.offsetHeight);
         }
     }, [current]);
 
-    /* Optional auto slide */
+ 
     useEffect(() => {
         if (!autoSlide) return;
         const timer = setInterval(next, interval);
@@ -41,7 +41,6 @@ export default function FeedbackSlider({
     return (
         <div className="w-[90%] sm:w-[70%y] flex flex-col items-center gap-15">
 
-            {/* SLIDER */}
             <div
                 className="relative w-full overflow-hidden flex items-center justify-center transition-[height] duration-500"
                 style={{ height }}
@@ -67,7 +66,6 @@ export default function FeedbackSlider({
             </div>
 
 
-            {/* CONTROLS */}
             <div className="flex items-center gap-16">
                 <button
                     onClick={prev}

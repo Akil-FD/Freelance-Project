@@ -3,16 +3,19 @@ import Carousel from "@/src/components/image-caursol";
 export default function Blog() {
     const slides = [
         {
+            id: 1,
             image: "/images/blog-1.jpg",
             title: "How to Use Green in your Space",
             description: "Design Tips",
         },
         {
+            id: 2,
             image: "/images/blog-2.jpg",
             title: "10 Amazing Hacks for Keeping your Closet Tidy",
             description: "Organization",
         },
         {
+            id: 3,
             image: "/images/blog-3.jpg",
             title: "Should You Add a Double Island to your Kitchen",
             description: "Design",

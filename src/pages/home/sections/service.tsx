@@ -5,16 +5,19 @@ import Carousel from "@/src/components/image-caursol";
 export default function Service() {
     const slides = [
         {
+            id: 1,
             image: "/images/service-1.jpg",
             title: "New Builds",
             description: "01",
         },
         {
+            id: 2,
             image: "/images/service-2.jpg",
             title: "Renovation",
             description: "02",
         },
         {
+            id: 3,
             image: "/images/service-3.jpg",
             title: "Design Consults",
             description: "03",
