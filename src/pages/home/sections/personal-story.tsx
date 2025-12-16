@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 export default function PersonalStory() {
@@ -13,6 +11,7 @@ export default function PersonalStory() {
                         alt="nature background"
                         fill
                         className="object-cover"
+                        priority
                     />
 
 
@@ -22,9 +21,10 @@ export default function PersonalStory() {
                     <div className="relative w-2/4 md:w-2/3 lg:w-1/2 h-[80%] sm:h-[70%]">
                         <Image
                             src="/images/person.jpg"
-                            alt="foreground accent"
+                            alt="Person"
                             fill
-                            className="object-cover shadow-xl"
+                            className="object-cover"
+                            priority
                         />
 
                         {/* Foreground overlay */}

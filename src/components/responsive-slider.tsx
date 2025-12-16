@@ -45,6 +45,8 @@ export default function ResponsiveSlider({ slides }: { slides: { id:number; src:
                             fill
                             className="object-cover"
                             priority={index === 0}
+                            placeholder='blur'
+                            blurDataURL={slide.src}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 100vw"
                         />
                    </div>

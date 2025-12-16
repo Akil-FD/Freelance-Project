@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 type CarouselItem = {
@@ -102,14 +103,14 @@ export default function Carousel({
                 isFullScreen ? "w-screen h-screen" : imageContainerClass
               } transition-transform duration-700 ease-in-out `}
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
-                className={
-                  isFullScreen
-                    ? "w-full h-full object-cover"
-                    : `${imageClass} transition-transform duration-700 `
-                }
+                priority
+                className={`${imageClass} ${isCenter ? "scale-100" : "scale-90"} transition-transform duration-500 ease-in-out`}
+                width={isFullScreen ? undefined : 300}
+                height={isFullScreen ? undefined : 400}
+                style={isFullScreen ? { width: "100vw", height: "100vh", objectFit: "cover" } : {}}
               />
 
               {!isFullScreen && (
@@ -180,7 +181,6 @@ export default function Carousel({
             onClick={prev}
             disabled={current === 0}
             className="absolute left-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 text-white disabled:opacity-40"
-            suppressHydrationWarning={true}
           >
             ❮
           </button>
@@ -189,7 +189,6 @@ export default function Carousel({
             onClick={next}
             disabled={current === items.length - 1}
             className="absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 text-white disabled:opacity-40"
-            suppressHydrationWarning={true}
           >
             ❯
           </button>

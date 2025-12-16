@@ -70,6 +70,7 @@ export default function FeedbackSlider({
                 <button
                     onClick={prev}
                     className="flex items-center gap-2 text-primary cursor-pointer"
+                    suppressHydrationWarning={true}
                 >
                     <span className="text-1xl">❮</span>
                     <span className="text-xs uppercase tracking-widest text-primary">
@@ -80,6 +81,7 @@ export default function FeedbackSlider({
                 <button
                     onClick={next}
                     className="flex items-center gap-2 text-primary cursor-pointer"
+                    suppressHydrationWarning={true}
                 >
                     <span className="text-xs uppercase tracking-widest text-primary">
                         Next

@@ -10,6 +10,8 @@ export default function Hero() {
                         alt="hero background"
                         fill
                         priority
+                        placeholder="blur"
+                        blurDataURL="/images/hero-1.jpg"
                         className="object-cover"
                         sizes="100vw"
                     />

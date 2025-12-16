@@ -43,7 +43,7 @@ export default function Footer() {
         <footer className="bg-primary text-white py-10">
             <div className="max-w-6xl mx-auto px-6">
 
-              
+
                 <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-1 mb-10">
                     {images.map((img, index) => (
                         <div
@@ -54,17 +54,14 @@ export default function Footer() {
                                 src={`/images/${img}`}
                                 alt={`Gallery ${index + 1}`}
                                 fill
-                                sizes="(max-width: 640px) 50vw,
-                       (max-width: 1024px) 25vw,
-                       14vw"
                                 className="object-cover"
-                                priority={index < 2}   // only first 2 load immediately
+                                priority// only first 2 load immediately
                             />
                         </div>
                     ))}
                 </div>
 
-                
+
                 <div className="flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-10">
 
                     <ul className="space-y-2">
@@ -116,6 +113,7 @@ export default function Footer() {
 
                         <button
                             type="button"
+                            suppressHydrationWarning={true}
                             className="border border-white px-6 py-2 rounded hover:bg-white hover:text-black transition"
                         >
                             Subscribe
